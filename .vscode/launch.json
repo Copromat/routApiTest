@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "name": "Launch Program",
+            "preLaunchTask": "start docker postgres",
+            "postDebugTask": "destroy docker postgres",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "env": {
+                "DATABASE_URL": "postgres://dockerdatabase:yourpassword@localhost:6666/test",
+                "DATABASE_URL_WITH_SCHEMA": "postgres://testPsqlUser:yourpassword@localhost:6666/dockerdatabase?schema=test",
+                "PORT": "6565"
+            }
+        }
+    ]
+}

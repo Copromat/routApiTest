@@ -1,0 +1,36 @@
+datasource db {
+  provider = "postgres"
+  // url      = "postgres://testPsqlUser:yourpassword@localhost:6666/dockerdatabase?schema=test"
+  url      = env("DATABASE_URL_WITH_SCHEMA")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id    Int    @id @default(autoincrement())
+  email String @unique
+  name  String
+}
+
+model Airplain {
+  id        Int      @id @default(autoincrement())
+  model     String?
+  create_at DateTime @default(now())
+}
+
+model Roles {
+  id         Int      @id @default(autoincrement())
+  updated_at DateTime @updatedAt
+  created_at DateTime @default(now())
+  name       String
+  access_lvl Int
+}
+
+model Car {
+  id         Int      @id @default(autoincrement())
+  model      String?
+  create_at  DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
