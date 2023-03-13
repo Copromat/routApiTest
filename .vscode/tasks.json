@@ -13,7 +13,7 @@
         {
             "label": "start docker postgres container",
             "type": "shell",
-            "command": "docker run --name some-postgres -v D:/V/express-test-server-v.2/db/:/app -p 6666:5432 -e POSTGRES_USER=testPsqlUser -e POSTGRES_PASSWORD=yourpassword -e POSTGRES_DB=dockerdatabase -d postgres"
+            "command": "docker run --name some-postgres -v D:/V/routApiTest/db/:/app -p 6666:5432 -e POSTGRES_USER=testPsqlUser -e POSTGRES_PASSWORD=yourpassword -e POSTGRES_DB=dockerdatabase -d postgres"
         },
         {
             "label": "sleep for 10 seconds",

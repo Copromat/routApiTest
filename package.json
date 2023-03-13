@@ -1,5 +1,5 @@
 {
-  "name": "express-test-server-v.2",
+  "name": "routApiTest",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

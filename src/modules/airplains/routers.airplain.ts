@@ -9,9 +9,9 @@ routers.post("/", async (req, res) => {
   const response = await postAirplain(body);
   return res.send(response);
 });
-routers.get("/",async (req, res) => {
+routers.get("/", async (req, res) => {
   const response = await getAirplans();
-  return res.send(response)
+  return res.send(response);
 });
 
 routers.get("/:id", async (req, res) => {
@@ -19,5 +19,6 @@ routers.get("/:id", async (req, res) => {
   const response = await getAirplan(+id);
   return res.send(response);
 });
+// а весь ебаный бекенд(базы данных) держаться на майле айди и тп?(дай бог ему здоровья)
 
 module.exports = routers;
